@@ -33,5 +33,5 @@
     
     a = (mu*(periodsid/twopi)^2)^(1.0/3.0);
 
-    fprintf(1,'a %16.8f %18.10f km \n',a,a/re );
+    fprintf(1,'a %16.8f km %18.10f ER \n',a,a/re );
 
