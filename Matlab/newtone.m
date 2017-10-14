@@ -55,7 +55,7 @@ function [m,nu] = newtone ( ecc,e0 );
                 % ---------------------- hyperbolic  ------------------
                 if ( ecc > 1.0001  )
                     m= ecc*sinh(e0) - e0;
-                    sinv= ( sqrt( ecc*ecc-1.0  ) * sinh(e0) ) / ( 1.0  - ecc*cosh(e0) );
+                    sinv= -( sqrt( ecc*ecc-1.0  ) * sinh(e0) ) / ( 1.0  - ecc*cosh(e0) );
                     cosv= ( cosh(e0)-ecc ) / ( 1.0  - ecc*cosh(e0) );
                     nu  = atan2( sinv,cosv );
                   else
