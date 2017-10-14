@@ -34,8 +34,8 @@
         re         = 6378.137;         % km
         flat       = 1.0/298.257223563;
         omegaearth = 7.292115e-5;     % rad/s
-        mu         = 398600.4418;      % km3/s2
-        mum        = 3.986004418e14;   % m3/s2
+        muearth   = 398600.4418;      % km3/s2
+        muearthm   = 3.986004418e14;   % m3/s2
 
         % derived constants from the base values
         eccearth = sqrt(2.0*flat - flat^2);
@@ -44,14 +44,14 @@
         renm = re / nm2m;
         reft = re * 1000.0 / ft2m;
 
-        tusec = sqrt(re^3/mu);
+        tusec = sqrt(re^3/muearth);
         tumin = tusec / 60.0;
         tuday = tusec / 86400.0;
 
         omegaearthradptu  = omegaearth * tusec;
         omegaearthradpmin = omegaearth * 60.0;
 
-        velkmps = sqrt(mu / re);
+        velkmps = sqrt(muearth / re);
         velftps = velkmps * 1000.0/ft2m;
         velradpmin = velkmps * 60.0/re;
 %for afspc
